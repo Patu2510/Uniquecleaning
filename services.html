@@ -20,6 +20,84 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
+         .hero-section {
+        background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+        color: white;
+        padding: 120px 0 80px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 60px;
+    }
+    
+    .hero-section:after {
+        content: '';
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-color: white;
+        transform: skewY(-2deg);
+        z-index: 1;
+    }
+    
+    .hero-section .container {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .hero-section h1, 
+    .hero-section h2 {
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .hero-section .lead {
+        font-size: 1.4rem;
+        max-width: 800px;
+        margin: 0 auto;
+        text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* CTA Hero Section */
+    .cta-hero {
+        margin-top: 60px;
+        margin-bottom: 0;
+        padding: 100px 0;
+    }
+    
+    .cta-hero:after {
+        transform: skewY(2deg);
+        bottom: auto;
+        top: -50px;
+    }
+    
+    .cta-buttons {
+        margin-top: 30px;
+    }
+    .cta-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/api/placeholder/1200/600') center/cover no-repeat;
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+    }
+    
+    .btn-outline-light {
+        border: 2px solid white;
+        font-weight: 600;
+        padding: 12px 30px;
+        transition: all 0.3s;
+    }
+    
+    .btn-outline-light:hover {
+        background-color: white;
+        color: var(--primary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
         
         .navbar-brand {
             font-weight: 700;
@@ -180,7 +258,52 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
-        
+        .booking-modal .modal-content {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.booking-modal .modal-header {
+    background-color: var(--primary-color);
+    color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 20px;
+}
+
+.booking-modal .modal-body {
+    padding: 30px;
+}
+
+.booking-modal .form-label {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.booking-modal .form-control {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.booking-modal .form-control:focus {
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.25);
+    border-color: var(--primary-color);
+}
+
+.booking-modal .btn-submit {
+    width: 100%;
+    padding: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.booking-modal .modal-footer {
+    border-top: none;
+    padding-top: 0;
+}    
         .process-step {
             text-align: center;
             position: relative;
@@ -216,12 +339,67 @@
             display: none;
         }
         
-        .cta-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/api/placeholder/1200/600') center/cover no-repeat;
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
+        /* Navbar Dropdown Styling */
+.book-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.book-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 250px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    padding: 15px;
+    right: 0;
+    top: calc(100% + 10px);
+}
+
+.book-dropdown-content:before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    transform: rotate(45deg);
+    box-shadow: -3px -3px 5px rgba(0,0,0,0.04);
+}
+
+.service-option {
+    display: block;
+    padding: 12px 15px;
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: all 0.3s;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.service-option:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.service-option i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.dropdown-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 8px;
+}
         
         footer {
             background-color: var(--dark-color);
@@ -278,6 +456,33 @@
             padding-top: 20px;
             margin-top: 40px;
         }
+         .btn-primary {
+            background: linear-gradient(45deg, var(--primary-color), #36D1DC);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #36D1DC, var(--primary-color));
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(52, 152, 219, 0.4);
+        }
+        
+        .btn-outline-light {
+            border-radius: 50px;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-width: 2px;
+        }
+        
+        .btn-outline-light:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
     </style>
 </head>
 <body>
@@ -308,18 +513,38 @@
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
-                <a href="contact.html" class="btn btn-primary ms-lg-3">Book a Service</a>
+                <div class="book-dropdown">
+    <a href="javascript:void(0)" class="btn btn-primary ms-lg-3" id="navBookBtn">Book a Service</a>
+    <div class="book-dropdown-content" id="bookDropdown">
+        <h6 class="dropdown-title">Select a Service</h6>
+        <a href="javascript:void(0)" class="service-option" onclick="openBookingModal('Home Cleaning')">
+            <i class="fas fa-home"></i> Home Cleaning
+        </a>
+        <a href="javascript:void(0)" class="service-option" onclick="openBookingModal('Office Cleaning')">
+            <i class="fas fa-building"></i> Office Cleaning
+        </a>
+        <a href="javascript:void(0)" class="service-option" onclick="openBookingModal('Deep Cleaning')">
+            <i class="fas fa-broom"></i> Deep Cleaning
+        </a>
+        <a href="javascript:void(0)" class="service-option" onclick="openBookingModal('Post Construction Cleaning')">
+            <i class="fas fa-hard-hat"></i> Post Construction Cleaning
+        </a>
+        <a href="javascript:void(0)" class="service-option" onclick="openBookingModal('Carpet Cleaning')">
+            <i class="fas fa-brush"></i> Carpet Cleaning
+        </a>
+    </div>
+</div>
             </div>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1 class="display-4 fw-bold">Our Services</h1>
-            <p class="lead">Professional cleaning solutions tailored to your needs</p>
-        </div>
-    </section>
+    <section class="hero-section">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Our Services</h1>
+        <p class="lead">Professional cleaning solutions tailored to your needs</p>
+    </div>
+</section>
 
     <!-- Services Section -->
     <section class="py-5">
@@ -563,18 +788,16 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="mb-4">Ready to Experience the Best Cleaning Service?</h2>
-                    <p class="mb-5">Book a service today and enjoy a clean, fresh environment</p>
-                    <a href="contact.html" class="btn btn-primary me-3">Book Now</a>
-                    <a href="tel:+918765432100" class="btn btn-outline-light">Call Us</a>
-                </div>
-            </div>
+   <section class="hero-section cta-hero">
+    <div class="container">
+        <h2 class="mb-4">Ready to Experience Our Service?</h2>
+        <p class="lead mb-5">Let us help you maintain a clean, healthy, and comfortable environment.</p>
+        <div class="cta-buttons">
+            <a href="javascript:void(0)" onclick="openBookingModal('Cleaning Service')" class="btn btn-primary me-3">Book Now</a>
+            <a href="services.html" class="btn btn-outline-light">Our Services</a>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
@@ -628,8 +851,190 @@ Thane - 401101</li>
             </div>
         </div>
     </footer>
+    <!-- Booking Modal -->
+<div class="modal fade booking-modal" id="bookingModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bookingModalLabel">Book a Service</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="bookingForm">
+                    <input type="hidden" id="selectedService" name="selectedService">
+                    
+                    <div class="mb-3">
+                        <label for="customerName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="customerName" name="customerName" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="customerEmail" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="customerEmail" name="customerEmail" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="customerPhone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="customerPhone" name="customerPhone" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="customerAddress" class="form-label">Address</label>
+                        <textarea class="form-control" id="customerAddress" name="customerAddress" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="serviceDate" class="form-label">Preferred Date</label>
+                            <input type="date" class="form-control" id="serviceDate" name="serviceDate" required>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="serviceTime" class="form-label">Preferred Time</label>
+                            <input type="time" class="form-control" id="serviceTime" name="serviceTime" required>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="specialRequests" class="form-label">Special Requests (Optional)</label>
+                        <textarea class="form-control" id="specialRequests" name="specialRequests" rows="2"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-submit">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+// Toggle dropdown when clicking the book button
+document.getElementById('navBookBtn').addEventListener('click', function(e) {
+    e.stopPropagation();
+    var dropdown = document.getElementById('bookDropdown');
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+    var dropdown = document.getElementById('bookDropdown');
+    if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+    }
+});
+
+// Prevent dropdown from closing when clicking inside it
+document.getElementById('bookDropdown').addEventListener('click', function(e) {
+    e.stopPropagation();
+});
+
+// Function to open booking modal with selected service
+function openBookingModal(serviceName) {
+    document.getElementById('selectedService').value = serviceName;
+    document.getElementById('bookingModalLabel').textContent = 'Book ' + serviceName;
+    
+    var bookingModal = new bootstrap.Modal(document.getElementById('bookingModal'));
+    bookingModal.show();
+    
+    // Close the dropdown after selection
+    document.getElementById('bookDropdown').style.display = 'none';
+}
+
+    // Function to open the booking modal with the selected service
+    function openBookingModal(serviceName) {
+        document.getElementById('selectedService').value = serviceName;
+        document.getElementById('bookingModalLabel').textContent = 'Book ' + serviceName;
+        
+        var bookingModal = new bootstrap.Modal(document.getElementById('bookingModal'));
+        bookingModal.show();
+    }
+    
+    // Add event listeners to all "Book This Service" and "Book Now" buttons
+    document.addEventListener('DOMContentLoaded', function() {
+        // Target all service booking buttons
+        var bookButtons = document.querySelectorAll('a.btn-primary[href="contact.html"]');
+        bookButtons.forEach(function(button) {
+            button.href = 'javascript:void(0)';
+            button.addEventListener('click', function() {
+                // Find the closest heading to get the service name
+                var serviceHeading = this.closest('.col-lg-6').querySelector('h2');
+                var serviceName = serviceHeading ? serviceHeading.textContent : 'Cleaning Service';
+                openBookingModal(serviceName);
+            });
+        });
+        
+        // Target pricing plan booking buttons
+        var pricingButtons = document.querySelectorAll('.pricing-card a.btn');
+        pricingButtons.forEach(function(button) {
+            button.href = 'javascript:void(0)';
+            button.addEventListener('click', function() {
+                // Find the pricing plan title
+                var planTitle = this.closest('.pricing-card').querySelector('.pricing-header h3').textContent;
+                openBookingModal(planTitle + ' Cleaning Plan');
+            });
+        });
+        
+        // CTA button
+        var ctaButton = document.querySelector('.cta-section a.btn-primary');
+        if (ctaButton) {
+            ctaButton.href = 'javascript:void(0)';
+            ctaButton.addEventListener('click', function() {
+                openBookingModal('Cleaning Service');
+            });
+        }
+        
+        // Handle form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            var service = document.getElementById('selectedService').value;
+            var name = document.getElementById('customerName').value;
+            var email = document.getElementById('customerEmail').value;
+            var phone = document.getElementById('customerPhone').value;
+            var address = document.getElementById('customerAddress').value;
+            var date = document.getElementById('serviceDate').value;
+            var time = document.getElementById('serviceTime').value;
+            var requests = document.getElementById('specialRequests').value;
+            
+            // Format date and time
+            var formattedDate = new Date(date).toLocaleDateString('en-IN');
+            
+            // Create email body
+            var body = "Dear Unique Best Cleaning Services Team,\n\n";
+            body += "I would like to book the following service:\n\n";
+            body += "Customer Details:\n";
+            body += "- Name: " + name + "\n";
+            body += "- Email: " + email + "\n";
+            body += "- Phone: " + phone + "\n";
+            body += "- Address: " + address + "\n\n";
+            body += "Service Details:\n";
+            body += "- Requested Service: " + service + "\n";
+            body += "- Preferred Date: " + formattedDate + "\n";
+            body += "- Preferred Time: " + time + "\n";
+            
+            if (requests) {
+                body += "\nSpecial Requests:\n" + requests + "\n";
+            }
+            
+            body += "\nThank you for your assistance. I look forward to your service.\n\n";
+            body += "Best regards,\n" + name;
+            
+            // Encode the body and open mailto link
+            var mailtoLink = "mailto:sales@uniquebestcleaningservice.com?cc=support@uniquebestcleaningservice.com";
+            mailtoLink += "&subject=" + encodeURIComponent("Booking Request: " + service);
+            mailtoLink += "&body=" + encodeURIComponent(body);
+            
+            window.location.href = mailtoLink;
+            
+            // Close the modal
+            var bookingModal = bootstrap.Modal.getInstance(document.getElementById('bookingModal'));
+            bookingModal.hide();
+        });
+    });
+</script>
 </body>
 </html>

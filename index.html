@@ -11,7 +11,6 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Custom Styling */
         :root {
             --primary-color: #1e88e5;
             --secondary-color: #26c6da;
@@ -20,25 +19,20 @@
             --light-color: #f5f7fa;
             --text-color: #455a64;
         }
-        
         body {
             font-family: 'Poppins', sans-serif;
             color: var(--text-color);
             overflow-x: hidden;
         }
-        
-        /* Improved Navbar */
         .navbar {
             padding: 15px 0;
             transition: all 0.4s ease;
         }
-        
         .navbar-brand {
             font-weight: 700;
             font-size: 1.5rem;
             color: var(--primary-color) !important;
         }
-        
         .navbar-nav .nav-link {
             font-weight: 500;
             color: var(--dark-color);
@@ -47,7 +41,6 @@
             padding: 6px 0;
             transition: all 0.3s;
         }
-        
         .navbar-nav .nav-link:after {
             content: '';
             position: absolute;
@@ -58,18 +51,14 @@
             background-color: var(--primary-color);
             transition: width 0.3s;
         }
-        
         .navbar-nav .nav-link:hover:after,
         .navbar-nav .nav-link.active:after {
             width: 100%;
         }
-        
         .navbar-nav .nav-link:hover,
         .navbar-nav .nav-link.active {
             color: var(--primary-color);
         }
-        
-        /* Enhanced Hero Section */
         .hero-section {
             background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://raw.githubusercontent.com/Patu2510/Uniquecleaning/refs/heads/main/Hero.jfif') center/cover no-repeat;
             color: white;
@@ -78,7 +67,6 @@
             position: relative;
             overflow: hidden;
         }
-        
         .hero-section:before {
             content: '';
             position: absolute;
@@ -88,12 +76,10 @@
             bottom: 0;
             background: radial-gradient(circle at center, rgba(46, 204, 113, 0.1) 0%, rgba(52, 152, 219, 0.1) 100%);
         }
-        
         .hero-content {
             position: relative;
             z-index: 2;
         }
-        
         .hero-title {
             font-size: 4rem;
             font-weight: 700;
@@ -101,7 +87,6 @@
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             animation: fadeInDown 1s ease;
         }
-        
         .hero-subtitle {
             font-size: 1.6rem;
             margin-bottom: 40px;
@@ -109,7 +94,6 @@
             animation: fadeInUp 1s ease 0.3s forwards;
             opacity: 0;
         }
-        
         @keyframes fadeInDown {
             from {
                 opacity: 0;
@@ -120,7 +104,6 @@
                 transform: translateY(0);
             }
         }
-        
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -131,8 +114,6 @@
                 transform: translateY(0);
             }
         }
-        
-        /* Stylish Buttons */
         .btn {
             border-radius: 30px;
             padding: 12px 30px;
@@ -145,7 +126,6 @@
             overflow: hidden;
             z-index: 1;
         }
-        
         .btn:after {
             content: '';
             position: absolute;
@@ -156,7 +136,6 @@
             background-color: rgba(255, 255, 255, 0.2);
             z-index: -2;
         }
-        
         .btn:before {
             content: '';
             position: absolute;
@@ -168,29 +147,23 @@
             transition: all 0.4s;
             z-index: -1;
         }
-        
         .btn:hover:before {
             width: 100%;
         }
-        
         .btn-primary {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
         }
-        
         .btn-primary:hover {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(30, 136, 229, 0.3);
         }
-        
         .btn-outline-light:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
-        
-        /* Improved Section Titles */
         .section-title {
             text-align: center;
             font-weight: 700;
@@ -199,7 +172,6 @@
             padding-bottom: 20px;
             color: var(--dark-color);
         }
-        
         .section-title:after {
             content: '';
             position: absolute;
@@ -211,8 +183,6 @@
             background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
             border-radius: 2px;
         }
-        
-        /* Enhanced Service Cards */
         .service-card {
             border: none;
             border-radius: 15px;
@@ -222,12 +192,10 @@
             overflow: hidden;
             height: 100%;
         }
-        
         .service-card:hover {
             transform: translateY(-15px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
-        
         .service-card:before {
             content: '';
             position: absolute;
@@ -238,11 +206,9 @@
             background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
             transition: height 0.4s ease;
         }
-        
         .service-card:hover:before {
             height: 100%;
         }
-        
         .service-icon {
             display: inline-flex;
             align-items: center;
@@ -254,40 +220,32 @@
             margin-bottom: 25px;
             transition: all 0.4s;
         }
-        
         .service-card:hover .service-icon {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             transform: scale(1.1) rotate(5deg);
         }
-        
         .service-icon i {
             font-size: 2.5rem;
             color: var(--primary-color);
             transition: all 0.4s;
         }
-        
         .service-card:hover .service-icon i {
             color: white;
         }
-        
         .service-card .card-title {
             font-weight: 600;
             margin-bottom: 15px;
             transition: all 0.3s;
         }
-        
         .service-card:hover .card-title {
             color: var(--primary-color);
         }
-        
-        /* Why Choose Us Section */
         .feature-section {
             background-color: var(--light-color);
             padding: 100px 0;
             position: relative;
             overflow: hidden;
         }
-        
         .feature-section:before {
             content: '';
             position: absolute;
@@ -298,7 +256,6 @@
             border-radius: 50%;
             background: radial-gradient(circle, rgba(38, 198, 218, 0.1) 0%, rgba(38, 198, 218, 0) 70%);
         }
-        
         .feature-section:after {
             content: '';
             position: absolute;
@@ -309,7 +266,6 @@
             border-radius: 50%;
             background: radial-gradient(circle, rgba(30, 136, 229, 0.1) 0%, rgba(30, 136, 229, 0) 70%);
         }
-        
         .feature-box {
             text-align: center;
             padding: 30px 15px;
@@ -317,11 +273,9 @@
             position: relative;
             z-index: 1;
         }
-        
         .feature-box:hover {
             transform: translateY(-10px);
         }
-        
         .feature-icon {
             width: 90px;
             height: 90px;
@@ -337,7 +291,6 @@
             z-index: 1;
             transition: all 0.4s;
         }
-        
         .feature-icon:before {
             content: '';
             position: absolute;
@@ -350,41 +303,32 @@
             z-index: -1;
             transition: all 0.4s;
         }
-        
         .feature-box:hover .feature-icon:before {
             transform: scale(1.2);
             opacity: 0.5;
         }
-        
         .feature-box h4 {
             font-weight: 600;
             margin-bottom: 15px;
             color: var(--dark-color);
         }
-        
-        /* Improved Testimonials */
         .testimonial-section {
             background: linear-gradient(135deg, var(--light-color) 0%, #e1f5fe 100%);
             padding: 100px 0;
             position: relative;
         }
-        
         .testimonial-card {
             background-color: white;
             border-radius: 15px;
-            padding: 40px 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 30px 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             margin: 20px 10px;
             transition: all 0.4s;
-            position: relative;
-            overflow: hidden;
         }
-        
         .testimonial-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
-        
         .testimonial-card:before {
             content: '\f10d';
             font-family: 'Font Awesome 5 Free';
@@ -395,7 +339,6 @@
             font-size: 2rem;
             color: rgba(30, 136, 229, 0.1);
         }
-        
         .testimonial-img {
             width: 80px;
             height: 80px;
@@ -404,54 +347,107 @@
             margin-bottom: 20px;
             border: 5px solid rgba(30, 136, 229, 0.1);
         }
-        
+        .testimonial-emoji {
+        font-size: 2.5rem;
+        display: inline-block;
+        margin-bottom: 12px;
+        background: #f5f7fa;  /* Light background to match the screenshot */
+        padding: 10px;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+        }
         .rating {
             color: #ffc107;
             margin-bottom: 15px;
             font-size: 1.1rem;
         }
-        
-        .testimonial-name {
-            font-weight: 600;
-            color: var(--dark-color);
-            margin-bottom: 5px;
+       .testimonial-name {
+        font-weight: 600;
+        color: var(--dark-color);
+        margin-bottom: 5px;
         }
-        
         /* Enhanced CTA Section */
         .cta-section {
-            background: linear-gradient(to right, rgba(30, 136, 229, 0.9), rgba(38, 198, 218, 0.9)), url('/api/placeholder/1200/600') center/cover no-repeat fixed;
+            background: linear-gradient(to right, rgba(44, 62, 80, 0.95), rgba(52, 152, 219, 0.95)), url('/api/placeholder/1200/600') center/cover fixed no-repeat;
             color: white;
             padding: 100px 0;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-section:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+            width: 100%;
         }
         
         .cta-section h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* Improved Footer */
+        /* Navbar Dropdown Styling */
+.book-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.book-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 250px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    padding: 15px;
+    right: 0;
+    top: calc(100% + 10px);
+}
+
+.book-dropdown-content:before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    transform: rotate(45deg);
+    box-shadow: -3px -3px 5px rgba(0,0,0,0.04);
+}
+
+.service-option {
+    display: block;
+    padding: 12px 15px;
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: all 0.3s;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.service-option:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.service-option i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.dropdown-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 8px;
+}
         footer {
             background-color: var(--dark-color);
             color: #bdc3c7;
@@ -459,7 +455,6 @@
             position: relative;
             overflow: hidden;
         }
-        
         footer:before {
             content: '';
             position: absolute;
@@ -469,7 +464,6 @@
             height: 4px;
             background: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--accent-color));
         }
-        
         .footer-title {
             font-weight: 600;
             margin-bottom: 25px;
@@ -478,7 +472,6 @@
             position: relative;
             padding-bottom: 15px;
         }
-        
         .footer-title:after {
             content: '';
             position: absolute;
@@ -488,49 +481,40 @@
             height: 3px;
             background-color: var(--primary-color);
         }
-        
         .footer-links {
             list-style: none;
             padding: 0;
         }
-        
         .footer-links li {
             margin-bottom: 15px;
             transition: all 0.3s;
         }
-        
         .footer-links li:hover {
             transform: translateX(5px);
         }
-        
         .footer-links a {
             color: #bdc3c7;
             text-decoration: none;
             transition: color 0.3s;
             display: block;
         }
-        
         .footer-links a:hover {
             color: var(--primary-color);
         }
-        
         .contact-info li {
             margin-bottom: 20px;
             display: flex;
             align-items: flex-start;
         }
-        
         .contact-info i {
             color: var(--primary-color);
             margin-right: 15px;
             font-size: 1.2rem;
             margin-top: 3px;
         }
-        
         .social-links {
             margin-top: 30px;
         }
-        
         .social-links a {
             display: inline-flex;
             width: 40px;
@@ -545,7 +529,6 @@
             position: relative;
             overflow: hidden;
         }
-        
         .social-links a:before {
             content: '';
             position: absolute;
@@ -558,29 +541,23 @@
             transform: scale(0);
             border-radius: 50%;
         }
-        
         .social-links a:hover:before {
             transform: scale(1);
         }
-        
         .social-links a i {
             position: relative;
             z-index: 1;
         }
-        
         .social-links a:hover {
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(30, 136, 229, 0.3);
         }
-        
         .copyright {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 25px;
             margin-top: 60px;
             color: #95a5a6;
         }
-        
-        /* Back to top button */
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -599,35 +576,27 @@
             transition: all 0.4s;
             z-index: 99;
         }
-        
         .back-to-top.active {
             opacity: 1;
             visibility: visible;
         }
-        
         .back-to-top:hover {
             background-color: var(--secondary-color);
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(30, 136, 229, 0.3);
         }
-        
-        /* Animation classes */
         .fadeInUp {
             animation: fadeInUp 1s forwards;
         }
-        
         .fadeInDown {
             animation: fadeInDown 1s forwards;
         }
-        
         .fadeInLeft {
             animation: fadeInLeft 1s forwards;
         }
-        
         .fadeInRight {
             animation: fadeInRight 1s forwards;
         }
-        
         @keyframes fadeInLeft {
             from {
                 opacity: 0;
@@ -638,7 +607,6 @@
                 transform: translateX(0);
             }
         }
-        
         @keyframes fadeInRight {
             from {
                 opacity: 0;
@@ -649,14 +617,36 @@
                 transform: translateX(0);
             }
         }
+         .btn-primary {
+            background: linear-gradient(45deg, var(--primary-color), #36D1DC);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+            transition: all 0.3s;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #36D1DC, var(--primary-color));
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(52, 152, 219, 0.4);
+        }
+        .btn-outline-light {
+            border-radius: 50px;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-width: 2px;
+        }
+        .btn-outline-light:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
     </style>
 </head>
 <body>
-    <!-- Back to top button -->
     <a href="#" class="back-to-top">
         <i class="fas fa-chevron-up"></i>
     </a>
-
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm fixed-top">
         <div class="container">
@@ -684,17 +674,16 @@
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
-                <a href="contact.html" class="btn btn-primary ms-lg-3">Book a Service</a>
+               <a href="services.html" class="btn btn-primary ms-lg-3">Book a Service</a>
             </div>
         </div>
     </nav>
-
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto hero-content">
-                    <h1 class="hero-title">Professional Cleaning Services</h1>
+                    <h1 class="hero-title">Shining Bright Cleaning Right</h1>
                     <p class="hero-subtitle">Transform your space with our expert cleaning solutions</p>
                     <a href="services.html" class="btn btn-primary me-3">Explore Services</a>
                     <a href="contact.html" class="btn btn-outline-light">Contact Us</a>
@@ -702,7 +691,6 @@
             </div>
         </div>
     </section>
-
     <!-- Services Preview Section -->
     <section class="py-5 my-5">
         <div class="container">
@@ -750,7 +738,6 @@
             </div>
         </div>
     </section>
-
     <!-- Why Choose Us Brief -->
     <section class="feature-section py-5">
         <div class="container">
@@ -798,7 +785,6 @@
             </div>
         </div>
     </section>
-
     <!-- Testimonials Section -->
     <section class="testimonial-section">
         <div class="container">
@@ -806,8 +792,8 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="testimonial-card">
-                        <img src="/api/placeholder/80/80" alt="Client" class="testimonial-img">
-                        <h5 class="testimonial-name">Rahul Sharma</h5>
+                       <div class="testimonial-emoji">👨</div>
+    <h5 class="testimonial-name">Rahul Sharma</h5>
                         <div class="rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -820,8 +806,8 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="testimonial-card">
-                        <img src="/api/placeholder/80/80" alt="Client" class="testimonial-img">
-                        <h5 class="testimonial-name">Priya Patel</h5>
+                        <div class="testimonial-emoji">👩</div>
+    <h5 class="testimonial-name">Priya Patel</h5>
                         <div class="rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -834,8 +820,8 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="testimonial-card">
-                        <img src="/api/placeholder/80/80" alt="Client" class="testimonial-img">
-                        <h5 class="testimonial-name">Amit Kumar</h5>
+                        <div class="testimonial-emoji">👨</div>
+    <h5 class="testimonial-name">Amit Kumar</h5>
                         <div class="rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -849,21 +835,17 @@
             </div>
         </div>
     </section>
-
     <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="mb-4">Ready to Experience the Best Cleaning Service?</h2>
-                    <p class="mb-5">Book a service today and enjoy a clean, fresh environment</p>
-                    <a href="contact.html" class="btn btn-primary me-3">Book Now</a>
-                    <a href="tel:+918765432100" class="btn btn-outline-light">Call Us</a>
-                </div>
-            </div>
+    <section class="cta-section cta-hero">
+    <div class="container">
+        <h2 class="mb-4">Ready to Experience Our Service?</h2>
+        <p class="lead mb-5">Let us help you maintain a clean, healthy, and comfortable environment.</p>
+        <div class="cta-buttons">
+            <a href="javascript:void(0)" onclick="openBookingModal('Cleaning Service')" class="btn btn-primary me-3">Book Now</a>
+            <a href="services.html" class="btn btn-outline-light">Our Services</a>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -902,9 +884,9 @@
                     <h3 class="footer-title">Contact Info</h3>
                     <ul class="footer-links contact-info">
                         <li><i class="fas fa-map-marker-alt"></i> <span>Shop no.4
-Shree Sai Mahal Building,
-Fatak road, Bhayander west,
-Thane - 401101</span></li>
+                            Shree Sai Mahal Building,
+                            Fatak road, Bhayander west,
+                            Thane - 401101</span></li>
                         <li><i class="fas fa-phone"></i> <span>+91 9082007371</span></li>
                         <li><i class="fas fa-envelope"></i> <span>support@uniquebestcleaningservice.com</span></li>
                         <li><i class="fas fa-clock"></i> <span>Mon-Sat: 8:00 AM - 8:00 PM</span></li>
@@ -916,28 +898,6 @@ Thane - 401101</span></li>
             </div>
         </div>
     </footer>
-
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Custom JS for Back to Top Button -->
-    <script>
-        window.addEventListener('scroll', function() {
-            var backToTop = document.querySelector('.back-to-top');
-            if (window.pageYOffset > 300) {
-                backToTop.classList.add('active');
-            } else {
-                backToTop.classList.remove('active');
-            }
-        });
-        
-        document.querySelector('.back-to-top').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>  
 </body>
 </html>
